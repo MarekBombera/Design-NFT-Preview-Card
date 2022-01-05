@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Outfit:wght@300;400;600&display=swap");
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	font-family: Outfit;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	background-color: rgb(13, 23, 45);
+}
+
+.card {
+	position: relative;
+	top: 15%;
+	display: flex;
+	flex-direction: column;
+	height: 37rem;
+	width: 22rem;
+	padding: 1.4rem;
+	background-color: rgb(21, 39, 63);
+	border-radius: 20px;
+
+	box-shadow: 0px 0px 5px 0px rgb(8, 15, 50), 0px 0px 5px 0px rgb(8, 20, 50),
+		0px 5px 50px 0px rgb(8, 25, 70);
+}
+
+.card__img {
+	position: relative;
+	height: 307px;
+}
+
+.card__img:hover {
+	background: #09fcfa;
+	cursor: pointer;
+}
+
+.card__img img {
+	width: 100%;
+	background-color: #09fcfa;
+}
+
+.card__viewIcon {
+	position: absolute;
+	top: 43%;
+	left: 43%;
+	opacity: 0;
+}
+
+.card__overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: 0.5s ease;
+	background-color: #09fcfa;
+}
+
+.card__img:hover .card__overlay {
+	opacity: 0.6;
+}
+
+.card__img:hover .card__viewIcon {
+	opacity: 1;
+	transition: 0.5s ease;
+}
+
+.card__description h2 {
+	color: white;
+}
+
+.card__description h2:hover {
+	color: #09fcfa;
+	cursor: pointer;
+}
+
+.card__info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card__price {
+	display: flex;
+	align-items: center;
+}
+
+.card__price p {
+	color: #09fcfa;
+}
+
+.card__timeLeft {
+	display: flex;
+	align-items: center;
+}
+
+.card__timeLeft p {
+	margin-left: 0.5rem;
+}
+
+.card__creator {
+	display: flex;
+	align-items: center;
+	margin-top: 0.8rem;
+}
+
+.card__creator img {
+	width: 30px;
+	border: 1px solid white;
+	border-radius: 50%;
+	margin-right: 1rem;
+}
+
+.card__creator p {
+	margin: 0;
+}
+
+.card__creator a:hover {
+	color: #09fcfa;
+	cursor: pointer;
+}
+
+hr {
+	height: 1px;
+	width: 100%;
+	border: none;
+	background-color: #2f4159;
+}
+
+p {
+	color: rgb(129, 149, 177);
+}
